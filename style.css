@@ -33,8 +33,8 @@ b{font-family: MyriadBold;}
 .flexRow{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-content: space-between;
+    justify-content: space-around;
+    align-items: baseline;
 }
 body{
     display: flex;
@@ -55,10 +55,16 @@ form{
     width: 95%;
     height: 70%;
 }
-.fields p{font-family: MyriadBold;}
+.fields label{font-family: MyriadBold;}
 
 /* ==========Renderização========== */
 
+.flexRowPrint{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: space-between;
+}
 .printMargin{
     margin-left: 10%;
     margin-right: 10%;

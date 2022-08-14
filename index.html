@@ -1,101 +1,113 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reciflex - Gerador de Recibos</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Reciflex - Gerador de Recibos</title>
 </head>
 
 <link rel="stylesheet" href="./reset.css">
 <link rel="stylesheet" href="./style.css">
-<link rel="shortcut icon" href="./icon.png"/>
+<link rel="shortcut icon" href="./icon.png" />
 
 <body>
-    <form>
-        <a class="title" target="_blank" href="https://github.com/ismaelzaccah/reciflex">
-            <img src="./logo.svg" alt="Reciflex Logotipo">
-            <span>1.1</span>
-            <p>Desenvolvido por Ismael Zaccah</p></a>
-                
-        <div class="fields flexColumn">
-            
-            <div class="flexColumn">
-                <p>Cliente:</p>             
-                <input id="clientField" type="text">
-            </div>
-            
-            <div class="flexColumn">
-                <p>Referente a</p>
-                <textarea id="refTextField" cols="30" rows="15"></textarea>
-            </div>
-            
-            <div class="flexRow" >
-                <div>
-                    <p>Data:
-                        <input id="todayCheckbox" type="checkbox" checked>
-                        <label>Hoje</label>
-                    </p>
-                    <input id="dateField" type="date" disabled> 
-                </div>
-                
-                <div class="flexColumn">
-                    <p>Valor:</p>
-                    <input id="numField" type="text">
-                </div>
-            </div>
-            
-            <div>
-                <p>Assinatura:</p>
-                <input type="radio" name="signature" value="1"><label>Assinatura1</label> 
-                <input type="radio" name="signature" value="2"><label>Assinatura2</label>
-                <input type="radio" name="signature" value="3"><label>Assinatura3</label>
-            </div>
-        </div>      
-            
-        
-        <div class="buttons">
-            <button type="reset">Limpar Campos</button>
-            <button id="render" >Gerar Recibo</button>
-        </div>
-    </form>
+	<form>
+		<a class="title" target="_blank" href="https://github.com/ismaelzaccah/reciflex" draggable="false">
+			<img src="./logo.svg" alt="Reciflex Logotipo" draggable="false">
+			<span>1.1</span>
+			<p>Desenvolvido por Ismael Zaccah</p>
+		</a>
 
-    <main class="off flexColumn">
-        
-        <a class="developer" target="_blank" href="https://github.com/ismaelzaccah/reciflex-stable">Documento Gerado por Reciflex 1.1 - Desenvolvido por Ismael Zaccah</a>
-                  
-        <div class="printMargin flexRow">
-            <img class="logo" src="./img/logo.svg">
-            <div class="company flexColumn">
-                <p>CN GRÁFICA - 21.599.019/0001-76</p>
-                <p>85 3047.1305 / 9 8866.5835</p>
-                <p>Av. Desembargador Gonzaga 531 - Loja 04</p>
-                <p>Cidade dos Funcionários - Fortaleza - CE</p>
-            </div>
-            <h1><b id="numWrite"></b></h1> 
-        </div>
-        
-        <h1><b>RECIBO</b></h1>
-        
-        <p class="content printMargin">Recebemos de <b id="clientWrite"></b> a quantia de <b id="numExtWrite"></b> referente a <b id="refTextWrite"></b> pelo que firmamos o presente recibo.</p>
-        
-        <div class="footer flexRow printMargin">
-            <p id="dateWrite"></p>
-            <div class="signature">
-                <img id="signatureWrite" src="">
-                <p>Assinatura</p>
-            </div>
-        </div>
+		<div class="fields flexColumn">
 
-        <div class="printOff printButtons">
-            <button id="createNew">Criar Novo</button>
-            <button id="print">Imprimir</button>
-        </div>
+			<div class="flexColumn">
+				<label>Cliente:</label>
+				<input id="clientField" type="text" placeholder="Digite o nome do Cliente">
+			</div>
 
-    </main>
+			<div class="flexColumn">
+				<label>Referente a</label>
+				<textarea id="refTextField" cols="30" rows="15"
+					placeholder="Digite a descrição dos serviços ou produtos vendidos"></textarea>
+			</div>
+
+			<div class="flexRow">
+				<div>
+					<label>Data:
+						<input id="todayCheckbox" type="checkbox" checked>
+						<label>Hoje</label>
+					</label>
+					<input id="dateField" type="date" disabled>
+				</div>
+
+				<div class="flexColumn">
+					<label>Valor:</label>
+					<input id="numField" type="text">
+				</div>
+			</div>
+
+			<div class="flexRow">
+				<div class="flexRow">
+					<input type="radio" name="signature" value="1"><label>Assinatura1</label>
+				</div>
+				<div class="flexRow">
+					<input type="radio" name="signature" value="2"><label>Assinatura2</label>
+				</div>
+				<div class="flexRow">
+
+					<input type="radio" name="signature" value="3"><label>Assinatura3</label>
+				</div>
+			</div>
+
+		</div>
+
+
+		<div class="buttons">
+			<button type="reset">Limpar Campos</button>
+			<button id="render">Gerar Recibo</button>
+		</div>
+	</form>
+
+	<main class="off flexColumn">
+
+		<a class="developer" target="_blank" draggable="false" href="https://github.com/ismaelzaccah/reciflex">Documento
+			Gerado pelo Reciflex 1.1 - Desenvolvido por Ismael Zaccah</a>
+
+		<div class="printMargin flexRowPrint">
+			<img class="logo" src="./img/logo.svg" draggable="false">
+			<div class="company flexColumn">
+				<p>CN GRÁFICA - 21.599.019/0001-76</p>
+				<p>85 3047.1305 / 9 8866.5835</p>
+				<p>Av. Desembargador Gonzaga 531 - Loja 04</p>
+				<p>Cidade dos Funcionários - Fortaleza - CE</p>
+			</div>
+			<h1><b id="numWrite"></b></h1>
+		</div>
+
+		<h1><b>RECIBO</b></h1>
+
+		<p class="content printMargin">Recebemos de <b id="clientWrite"></b> a quantia de <b id="numExtWrite"></b>
+			referente a <b id="refTextWrite"></b> pelo que firmamos o presente recibo.</p>
+
+		<div class="footer flexRowPrint printMargin">
+			<p id="dateWrite"></p>
+			<div class="signature">
+				<img id="signatureWrite" src="">
+				<p>Assinatura</p>
+			</div>
+		</div>
+
+		<div class="printOff printButtons">
+			<button id="createNew">Criar Novo</button>
+			<button id="print">Imprimir</button>
+		</div>
+
+	</main>
 
 </body>
 
- <script src="./app.js"></script>
- </html>
-            
+<script src="./app.js"></script>
+
+</html>
