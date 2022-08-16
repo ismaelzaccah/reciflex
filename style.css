@@ -132,3 +132,4 @@ main h1{
 @media print{
     .printOff{display: none;}
     .developer{margin-top: 2%;}
+}
