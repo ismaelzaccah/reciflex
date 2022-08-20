@@ -1,4 +1,6 @@
-import "./extenso";
+import {extenso} from "./extenso.js";
+String.prototype.extenso = extenso;
+import { writeInTag } from "./writeInTag.js";
 
 //Tela de Campos, Tela de impressão
 const screen          = document.querySelector("form")
@@ -25,12 +27,6 @@ buttonCreateNew.addEventListener("click", ()=>{
 	window.location.reload()})
 buttonPrint.addEventListener("click", ()=>{
 		window.print()})
-
-//Função para escrever os dados tratados nas tags
-function writeInTag(tagLoad,tagTarget) {
-	let text = document.createTextNode(tagLoad)
-	tagTarget.appendChild(text)
-}
 
 //Habilita o campo de DATA para entrada manual
 todayCheckbox.addEventListener("change", ()=>{
@@ -76,7 +72,7 @@ buttonRender.addEventListener("click", (event)=>{
 	
 	//trata e converte o valor para extenso
 	num = num.replace(".", ",")
-	var numExt = num.extenso(currency = true)
+	var numExt = num.extenso(true)
 	num = "R$ " + num
 
 	writeInTag(client, clientWrite)	

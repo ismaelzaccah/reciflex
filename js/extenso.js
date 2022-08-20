@@ -1,7 +1,7 @@
 //+ Carlos R. L. Rodrigues
 //@ http://jsfromhell.com/string/extenso [rev. #3]
 
-String.prototype.extenso = (c)=>{
+const extenso = function(c){
 	var ex = [
 		["zero", "um", "dois", "três", "quatro", "cinco", "seis", "sete", "oito", "nove", "dez", "onze", "doze", "treze", "quatorze", "quinze", "dezesseis", "dezessete", "dezoito", "dezenove"],
 		["dez", "vinte", "trinta", "quarenta", "cinquenta", "sessenta", "setenta", "oitenta", "noventa"],
@@ -24,3 +24,4 @@ String.prototype.extenso = (c)=>{
 	}
 	return r.join(e);
 }
+export{extenso};
