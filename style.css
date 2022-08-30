@@ -1,10 +1,10 @@
 @font-face {
     font-family: MyriadBold; 
-    src: url(./assets/MyriadPro-Bold.otf);
+    src: url(./font/MyriadPro-Bold.otf);
 }
 @font-face {
     font-family: Myriad; 
-    src: url(./assets/MyriadPro-Regular.otf);
+    src: url(./font/MyriadPro-Regular.otf);
 }
 .reciflexLogo{
     width: 150px;
@@ -132,4 +132,3 @@ main h1{
 @media print{
     .printOff{display: none;}
     .developer{margin-top: 2%;}
-}
